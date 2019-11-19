@@ -19,6 +19,11 @@ class QuizzesTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
+    @IBAction func refreshQuizzes(_ sender: UIBarButtonItem) {
+        quiz10model.download()
+        tableView.reloadData()
+    }
+    
     @IBSegueAction func showQuiz(_ coder: NSCoder) -> QuizViewController? {
         let qvc = QuizViewController(coder: coder)
         

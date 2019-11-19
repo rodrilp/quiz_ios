@@ -65,7 +65,15 @@
                             <outlet property="delegate" destination="Tks-rS-65K" id="mlH-20-dx8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Quizzes" id="NEE-0A-LIH"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Quizzes" id="NEE-0A-LIH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Afw-XN-aZN">
+                            <connections>
+                                <action selector="refreshQuizzes:" destination="Tks-rS-65K" id="6kr-sn-Ez5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghu-Hs-Nne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
