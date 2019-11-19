@@ -23,22 +23,3 @@ func image(url: URL) -> UIImage {
     }
     return UIImage(named: "none")!
 }
-
-/*
-
- 
- 
- 
- 
-             if let img = ImageCache[url]{
-                 return img
-             }
-             
-             if let data = try? Data(contentsOf: url){
-                 let img = UIImage(data: data){
-                     ImageCache[url] = img
-                     return img
-                 }
-             }
-             return UIImage(named: "none")!
- */
