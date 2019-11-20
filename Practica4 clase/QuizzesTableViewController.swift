@@ -48,21 +48,34 @@ class QuizzesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Quiz Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomQuizCell", for: indexPath) as! CustomTableViewCell
 
         let row = indexPath.row
         let quiz = quiz10model.quizzes[row]
         
-        cell.textLabel?.text = quiz.question
-        cell.detailTextLabel?.text = quiz.author?.username ?? "Anónimo"
-        cell.imageView?.image = UIImage(named: "none")
+        cell.questionLabel.text = quiz.question
+        cell.authorLabel.text = quiz.author?.username ?? "Anónimo"
+        cell.imageQuestion.image = UIImage(named: "none")
         if let url = quiz.attachment?.url{
             let img = image(url: url)
-            cell.imageView?.image = img
+            cell.imageQuestion.image = img
         }
+        
+        cell.imageAuthor.layer.masksToBounds = true
+        cell.imageAuthor.layer.cornerRadius = cell.imageAuthor.bounds.width / 2
+        
+        cell.imageAuthor.image = UIImage(named: "none")
+        if let url = quiz.author?.photo?.url{
+            let imag = image(url: url)
+            cell.imageAuthor.image = imag
+        }
+
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(95)
+    }
 
     /*
     // Override to support conditional editing of the table view.

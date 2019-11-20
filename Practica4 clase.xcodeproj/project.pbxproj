@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0101814223855C7500F2CEDC /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0101814123855C7500F2CEDC /* CustomTableViewCell.swift */; };
 		01EA67AD237D6E5400AD1BD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EA67AC237D6E5400AD1BD4 /* AppDelegate.swift */; };
 		01EA67AF237D6E5400AD1BD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EA67AE237D6E5400AD1BD4 /* SceneDelegate.swift */; };
 		01EA67B4237D6E5400AD1BD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EA67B2237D6E5400AD1BD4 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0101814123855C7500F2CEDC /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		01EA67A9237D6E5400AD1BD4 /* Practica4 clase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Practica4 clase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EA67AC237D6E5400AD1BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01EA67AE237D6E5400AD1BD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				01EA67BA237D6E5600AD1BD4 /* Info.plist */,
 				01EA67C5237D770A00AD1BD4 /* AlertViewController.swift */,
 				01EA67C7237D7A8900AD1BD4 /* ImageStore.swift */,
+				0101814123855C7500F2CEDC /* CustomTableViewCell.swift */,
 			);
 			path = "Practica4 clase";
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			files = (
 				01EA67AD237D6E5400AD1BD4 /* AppDelegate.swift in Sources */,
 				01EA67CA237D833C00AD1BD4 /* QuizViewController.swift in Sources */,
+				0101814223855C7500F2CEDC /* CustomTableViewCell.swift in Sources */,
 				01EA67C1237D6ED900AD1BD4 /* QuizzesTableViewController.swift in Sources */,
 				01EA67AF237D6E5400AD1BD4 /* SceneDelegate.swift in Sources */,
 				01EA67C6237D770A00AD1BD4 /* AlertViewController.swift in Sources */,
