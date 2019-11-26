@@ -13,17 +13,16 @@ class QuizViewController: UIViewController {
     var quiz: QuizItem!
     
     @IBOutlet weak var quizLabel: UILabel!
-    @IBOutlet weak var ansLabel: UILabel!
     @IBOutlet weak var quizImage: UIImageView!
     @IBOutlet weak var authorImage: UIImageView!
     @IBOutlet weak var quizAuthor: UILabel!
+    @IBOutlet weak var quizAnswer: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
             
         quizLabel.text = quiz.question
-        ansLabel.text = quiz.answer
         quizAuthor.text = quiz.author?.username
         quizImage.image = UIImage(named: "none")!
         if let url = quiz.attachment?.url{
@@ -32,6 +31,16 @@ class QuizViewController: UIViewController {
         authorImage.image = UIImage(named: "none")!
         if let url1 = quiz.author?.photo?.url{
             authorImage.image = image(url: url1)
+        }
+
+
+    }
+    
+    @IBAction func quizCheck(_ sender: UIButton) {
+        if quizAnswer.text?.lowercased() == quiz.answer.lowercased() {
+            alert(msg: "Enhorabuena, has acertado")
+        }else{
+            alert(msg: "Lo siento, vuelva a intentarlo")
         }
     }
     /*@IBSegueAction func segueToView(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> QuizViewController? {
@@ -49,4 +58,21 @@ class QuizViewController: UIViewController {
     }
     */
 
+}
+
+extension UIViewController {
+    
+    func alert(msg: String, completionHandler: (() -> ())? = nil) {
+        
+        print("Alerta: \(msg)")
+        
+        let avc = UIAlertController(title: "Resultado", message: msg, preferredStyle: .alert)
+        
+        avc.addAction(UIAlertAction(title: "OK",
+                                    style: .default) { (action) in
+                                        completionHandler?()
+        })
+        
+        present(avc, animated: true)
+    }
 }
